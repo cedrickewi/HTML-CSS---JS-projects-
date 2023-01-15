@@ -16,6 +16,10 @@ btn.addEventListener("click", ()=>{
            response.textContent = yes
         }
     })
+    btn.style.display = "none"
+    setInterval(()=>{
+        location.reload()
+    }, 5000)
 })
 
 feadbacksImo.forEach(feadback => {
