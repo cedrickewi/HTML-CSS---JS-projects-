@@ -3,6 +3,7 @@ const feadbacks = document.querySelector(".feadbacks")
 const result = document.querySelector(".result")
 const feadbacksImo = document.querySelectorAll(".feadback")
 const response = document.querySelector(".response")
+btn.disabled = true
 
 console.log(response);
 
@@ -19,12 +20,11 @@ btn.addEventListener("click", ()=>{
 
 feadbacksImo.forEach(feadback => {
     feadback.addEventListener("click", () => {
+        btn.disabled = false
         feadbacksImo.forEach(feadbackActive=>{
             feadbackActive.classList.remove("active")
         })
         feadback.classList.add("active")
-        const x = feadback.childNodes[3].textContent;
-        console.log(x);
     })
 })
 
